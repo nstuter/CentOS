@@ -1,8 +1,9 @@
-FROM ubuntu:latest
+FROM centos:7
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install build-essential -y
+RUN yum update && \
+    yum upgrade -y && \
+    yum install gcc gcc-c++ make && \
+    yum install nodejs
 
 COPY . /clientaction
 ENTRYPOINT ["/clientaction/entrypoint.sh"]
