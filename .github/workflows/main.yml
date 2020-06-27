@@ -7,6 +7,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0                  # Fetches all history
     - name: Diff action step
       uses: ./.github/actions/RepoCheck # Uses an action in RepoCheck
       id: make
