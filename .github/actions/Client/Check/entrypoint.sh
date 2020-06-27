@@ -1,7 +1,6 @@
 #!/bin/bash
 
-set -e
-set -u
+set -eu
 
 cd $GITHUB_WORKSPACE
 

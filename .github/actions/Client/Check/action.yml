@@ -1,0 +1,6 @@
+# action.yml
+name: 'Client Run Command'
+description: 'Performs client static analysis'
+runs:
+  using: 'docker'
+  image: '..\Dockerfile'
