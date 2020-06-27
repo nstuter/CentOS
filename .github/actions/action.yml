@@ -1,0 +1,6 @@
+# action.yml
+name: 'Diff Command'
+description: 'Executes a diff command'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

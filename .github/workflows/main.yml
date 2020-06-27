@@ -1,13 +1,12 @@
-name: "Pull Request Repo Check"
-on:
-- pull_request
+on: [push]
 
 jobs:
-  triage:
+  make_file:
     runs-on: ubuntu-latest
+    name: A job to run diff commands
     steps:
-    - uses: actions/checkout@v2
-    - name: Repo Check
-      uses: actions/labeler@v2
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Diff action step
+      uses: ./.github/actions # Uses an action  in the root directory
+      id: make
