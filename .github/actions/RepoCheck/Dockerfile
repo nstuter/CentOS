@@ -6,4 +6,4 @@ RUN apt-get update && \
 
 COPY . /action
 
-ENTRYPOINT ["/action/entrypoint.sh"]
+ENTRYPOINT ["/action/repo.sh"]
